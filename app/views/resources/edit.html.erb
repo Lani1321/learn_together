@@ -1,6 +1,6 @@
 <h1>New Resource</h1> 
  
-<%= form_for :resource, url: resource_path(@@resource), method: :patch do |f| %>
+<%= form_for :resource, url: resource_path(@resource), method: :patch do |f| %>
  
    <% if @resource.errors.any? %>
     <div id="error_explanation">
