@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   resources :users
 
+  resources :tags
+
   root 'welcome#index'
 
   delete '/resources', to: 'resources#destroy'
