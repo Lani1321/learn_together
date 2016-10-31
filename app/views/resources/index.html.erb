@@ -13,6 +13,7 @@
       <td><%= resource.title %></td>
       <td><%= resource.link %></td>
       <td><%= link_to 'Resource', resource_path(resource) %></td>
+      <td><%= link_to 'Edit', edit_resource_path(resource) %></td>
     </tr>
   <% end %>
 </table>
