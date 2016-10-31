@@ -44,6 +44,14 @@ class ResourcesController < ApplicationController
     end
   end
 
+  # Don't need to add a view for this action since we're redirecting to the index action
+  def destroy
+    @resource = Resource.find(params[:id])
+    @resource.destroy
+   
+    redirect_to resources_path
+  end
+
   private
 
   def resource_params
