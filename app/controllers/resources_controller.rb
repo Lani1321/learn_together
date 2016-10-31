@@ -35,6 +35,15 @@ class ResourcesController < ApplicationController
     end
   end
 
+  def update
+    @resource = Resource.find(params[:id])
+    if @resource.update(resource_params)
+      redirect_to @resource
+    else
+      render 'edit'
+    end
+  end
+
   private
 
   def resource_params
