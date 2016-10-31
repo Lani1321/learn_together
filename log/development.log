@@ -1,0 +1,737 @@
+Started GET "/" for ::1 at 2016-10-31 07:46:51 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /Users/laniberry/.rvm/gems/ruby-2.2.5/gems/railties-5.0.0.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/laniberry/.rvm/gems/ruby-2.2.5/gems/railties-5.0.0.1/lib/rails/templates/rails/welcome/index.html.erb (5.2ms)
+Completed 200 OK in 28ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-10-31 07:51:08 -0400
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 1036ms (Views: 1033.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-10-31 07:53:03 -0400
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 31ms (Views: 28.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/resources/new" for ::1 at 2016-10-31 07:54:48 -0400
+  
+ActionController::RoutingError (uninitialized constant ResourcesController):
+  
+activesupport (5.0.0.1) lib/active_support/inflector/methods.rb:268:in `const_get'
+activesupport (5.0.0.1) lib/active_support/inflector/methods.rb:268:in `block in constantize'
+activesupport (5.0.0.1) lib/active_support/inflector/methods.rb:266:in `each'
+activesupport (5.0.0.1) lib/active_support/inflector/methods.rb:266:in `inject'
+activesupport (5.0.0.1) lib/active_support/inflector/methods.rb:266:in `constantize'
+actionpack (5.0.0.1) lib/action_dispatch/http/request.rb:93:in `controller_class'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:30:in `serve'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:725:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.0.1) lib/active_record/migration.rb:552:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/laniberry/.rvm/gems/ruby-2.2.5/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/laniberry/.rvm/gems/ruby-2.2.5/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/laniberry/.rvm/gems/ruby-2.2.5/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered collection of /Users/laniberry/.rvm/gems/ruby-2.2.5/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [9 times] (17.6ms)
+  Rendered /Users/laniberry/.rvm/gems/ruby-2.2.5/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (14.6ms)
+  Rendering /Users/laniberry/.rvm/gems/ruby-2.2.5/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/laniberry/.rvm/gems/ruby-2.2.5/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /Users/laniberry/.rvm/gems/ruby-2.2.5/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (117.2ms)
+Started GET "/resources/new" for ::1 at 2016-10-31 07:55:15 -0400
+  
+AbstractController::ActionNotFound (The action 'new' could not be found for ResourcesController):
+  
+actionpack (5.0.0.1) lib/abstract_controller/base.rb:121:in `process'
+actionview (5.0.0.1) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.0.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.0.1) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:725:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.0.1) lib/active_record/migration.rb:552:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/laniberry/.rvm/gems/ruby-2.2.5/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout
+  Rendered /Users/laniberry/.rvm/gems/ruby-2.2.5/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.5ms)
+Started GET "/resources/new" for ::1 at 2016-10-31 07:56:26 -0400
+Processing by ResourcesController#new as HTML
+Completed 406 Not Acceptable in 49ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (ResourcesController#new is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not… nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.0.0.1) lib/action_controller/metal/implicit_render.rb:56:in `default_render'
+actionpack (5.0.0.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.0.0.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.0.0.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.0.0.1) lib/abstract_controller/base.rb:188:in `process_action'
+actionpack (5.0.0.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.0.0.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.0.1) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.0.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.0.1) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.0.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.0.1) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.0.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.0.1) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.0.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.0.1) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.0.1) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.0.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.0.1) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:725:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.0.1) lib/active_record/migration.rb:552:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/laniberry/.rvm/gems/ruby-2.2.5/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/laniberry/.rvm/gems/ruby-2.2.5/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/laniberry/.rvm/gems/ruby-2.2.5/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering /Users/laniberry/.rvm/gems/ruby-2.2.5/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/laniberry/.rvm/gems/ruby-2.2.5/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /Users/laniberry/.rvm/gems/ruby-2.2.5/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/laniberry/.rvm/gems/ruby-2.2.5/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/laniberry/.rvm/gems/ruby-2.2.5/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (65.4ms)
+Started GET "/resources/new" for ::1 at 2016-10-31 07:58:27 -0400
+Processing by ResourcesController#new as HTML
+  Rendering resources/new.html.erb within layouts/application
+  Rendered resources/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 158ms (Views: 156.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/resources/new" for ::1 at 2016-10-31 08:01:52 -0400
+Processing by ResourcesController#new as HTML
+  Rendering resources/new.html.erb within layouts/application
+  Rendered resources/new.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h1>New Resource</h1>
+    2: 
+    3: <!-- Use a form builder, provided by a Helper Method form_for to create a form -->
+    4: <%= form_for @resource do |f| %>
+    5:   <p>
+    6:     <%= f.label :title %><br>
+    7:     <%= f.text_field :title %>
+  
+app/views/resources/new.html.erb:4:in `_app_views_resources_new_html_erb__1362453900159925485_70219829970840'
+  Rendering /Users/laniberry/.rvm/gems/ruby-2.2.5/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/laniberry/.rvm/gems/ruby-2.2.5/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/laniberry/.rvm/gems/ruby-2.2.5/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.7ms)
+  Rendering /Users/laniberry/.rvm/gems/ruby-2.2.5/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/laniberry/.rvm/gems/ruby-2.2.5/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering /Users/laniberry/.rvm/gems/ruby-2.2.5/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/laniberry/.rvm/gems/ruby-2.2.5/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/laniberry/.rvm/gems/ruby-2.2.5/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (65.8ms)
+Started GET "/resources/new" for ::1 at 2016-10-31 08:02:12 -0400
+Processing by ResourcesController#new as HTML
+  Rendering resources/new.html.erb within layouts/application
+  Rendered resources/new.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 45ms (Views: 43.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/resources/new" for ::1 at 2016-10-31 08:05:07 -0400
+Processing by ResourcesController#new as HTML
+  Rendering resources/new.html.erb within layouts/application
+  Rendered resources/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 33ms (Views: 30.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/resources/new" for ::1 at 2016-10-31 08:05:09 -0400
+Processing by ResourcesController#new as HTML
+  Rendering resources/new.html.erb within layouts/application
+  Rendered resources/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 24ms (Views: 22.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/resources" for ::1 at 2016-10-31 08:05:18 -0400
+  
+AbstractController::ActionNotFound (The action 'create' could not be found for ResourcesController):
+  
+actionpack (5.0.0.1) lib/abstract_controller/base.rb:121:in `process'
+actionview (5.0.0.1) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.0.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.0.1) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:725:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.0.1) lib/active_record/migration.rb:552:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/laniberry/.rvm/gems/ruby-2.2.5/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout
+  Rendered /Users/laniberry/.rvm/gems/ruby-2.2.5/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.4ms)
+Started POST "/resources" for ::1 at 2016-10-31 08:05:47 -0400
+Processing by ResourcesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2mmfKDajqwtqBdHPJeigrr4Hy9nvQZgFuvOaFQgwKToIg7/QVXIfF4w6UmR2VMXrE47ed4bRM6nZlrwyqYsGYA==", "resource"=>{"title"=>"Hello", "text"=>"hello world"}, "commit"=>"Save Resource"}
+No template found for ResourcesController#create, rendering head :no_content
+Completed 204 No Content in 50ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/resources/new" for ::1 at 2016-10-31 08:05:52 -0400
+Processing by ResourcesController#new as HTML
+  Rendering resources/new.html.erb within layouts/application
+  Rendered resources/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 30ms (Views: 27.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/resources" for ::1 at 2016-10-31 08:06:05 -0400
+Processing by ResourcesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"K7kjAx+Ia5cM7NH+1ntmJ00Tr2RNofTiOyRO/lNSnur5UwP7fFnfi+rTUlWFxwNi4Jq6yiQxX05YQWjZ8umxsA==", "resource"=>{"title"=>"This is a great resource", "text"=>"google.com"}, "commit"=>"Save Resource"}
+No template found for ResourcesController#create, rendering head :no_content
+Completed 204 No Content in 48ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/resources/new" for ::1 at 2016-10-31 08:06:52 -0400
+Processing by ResourcesController#new as HTML
+  Rendering resources/new.html.erb within layouts/application
+  Rendered resources/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 33ms (Views: 30.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/resources" for ::1 at 2016-10-31 08:06:58 -0400
+Processing by ResourcesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SequFh00Axve/4qNeKL02CKYwnlIGKC65prnhWTpcGqbAI7ufuW3BzjACSYrHpGdjxHX1yGICxaF/8GixVJfMA==", "resource"=>{"title"=>"Hi", "text"=>"hjhk"}, "commit"=>"Save Resource"}
+  Rendering text template
+  Rendered text template (0.1ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/resources" for ::1 at 2016-10-31 08:07:24 -0400
+Processing by ResourcesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SequFh00Axve/4qNeKL02CKYwnlIGKC65prnhWTpcGqbAI7ufuW3BzjACSYrHpGdjxHX1yGICxaF/8GixVJfMA==", "resource"=>{"title"=>"Hi", "text"=>"hjhk"}, "commit"=>"Save Resource"}
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/resources" for ::1 at 2016-10-31 08:08:54 -0400
+Processing by ResourcesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SequFh00Axve/4qNeKL02CKYwnlIGKC65prnhWTpcGqbAI7ufuW3BzjACSYrHpGdjxHX1yGICxaF/8GixVJfMA==", "resource"=>{"title"=>"Hi", "text"=>"hjhk"}, "commit"=>"Save Resource"}
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/resources" for ::1 at 2016-10-31 08:09:09 -0400
+Processing by ResourcesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SequFh00Axve/4qNeKL02CKYwnlIGKC65prnhWTpcGqbAI7ufuW3BzjACSYrHpGdjxHX1yGICxaF/8GixVJfMA==", "resource"=>{"title"=>"Ruby", "text"=>"www.google.com"}, "commit"=>"Save Resource"}
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-10-31 08:10:03 -0400
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 412ms (Views: 400.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/resources/new" for ::1 at 2016-10-31 08:10:09 -0400
+Processing by ResourcesController#new as HTML
+  Rendering resources/new.html.erb within layouts/application
+  Rendered resources/new.html.erb within layouts/application (22.2ms)
+Completed 200 OK in 48ms (Views: 46.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/resources" for ::1 at 2016-10-31 08:10:28 -0400
+Processing by ResourcesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QCtouE2XIs3PJ5Gc6I6jnbtKJor/eLWsy0qQZP2X5DSSwUhALkaW0SkYEje7MsbYFsMzJJboHgCoL7ZDXCzLbg==", "resource"=>{"title"=>"Ruby", "link"=>"Rubydocs.com"}, "commit"=>"Save Resource"}
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateResources (20161031121128)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "resources" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "link" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161031121128"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2016-10-31 12:12:27 UTC], ["updated_at", 2016-10-31 12:12:27 UTC]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started POST "/resources" for ::1 at 2016-10-31 08:15:31 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ResourcesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QCtouE2XIs3PJ5Gc6I6jnbtKJor/eLWsy0qQZP2X5DSSwUhALkaW0SkYEje7MsbYFsMzJJboHgCoL7ZDXCzLbg==", "resource"=>{"title"=>"Ruby", "link"=>"Rubydocs.com"}, "commit"=>"Save Resource"}
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/resources_controller.rb:7:in `create'
+  Rendering /Users/laniberry/.rvm/gems/ruby-2.2.5/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/laniberry/.rvm/gems/ruby-2.2.5/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/laniberry/.rvm/gems/ruby-2.2.5/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.4ms)
+  Rendering /Users/laniberry/.rvm/gems/ruby-2.2.5/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/laniberry/.rvm/gems/ruby-2.2.5/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendering /Users/laniberry/.rvm/gems/ruby-2.2.5/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/laniberry/.rvm/gems/ruby-2.2.5/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/laniberry/.rvm/gems/ruby-2.2.5/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (74.1ms)
+Started POST "/resources" for ::1 at 2016-10-31 08:22:34 -0400
+Processing by ResourcesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QCtouE2XIs3PJ5Gc6I6jnbtKJor/eLWsy0qQZP2X5DSSwUhALkaW0SkYEje7MsbYFsMzJJboHgCoL7ZDXCzLbg==", "resource"=>{"title"=>"Ruby", "link"=>"Rubydocs.com"}, "commit"=>"Save Resource"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "resources" ("title", "link", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Ruby"], ["link", "Rubydocs.com"], ["created_at", 2016-10-31 12:22:34 UTC], ["updated_at", 2016-10-31 12:22:34 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/resources/1
+Completed 302 Found in 25ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/resources/1" for ::1 at 2016-10-31 08:22:34 -0400
+Processing by ResourcesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mResource Load (0.4ms)[0m  [1m[34mSELECT  "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering resources/show.html.erb within layouts/application
+  Rendered resources/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 40ms (Views: 31.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/resources/1" for ::1 at 2016-10-31 08:23:23 -0400
+Processing by ResourcesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mResource Load (0.1ms)[0m  [1m[34mSELECT  "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering resources/show.html.erb within layouts/application
+  Rendered resources/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 30ms (Views: 26.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/resources/1" for ::1 at 2016-10-31 08:23:38 -0400
+Processing by ResourcesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mResource Load (0.1ms)[0m  [1m[34mSELECT  "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering resources/show.html.erb within layouts/application
+  Rendered resources/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 19ms (Views: 16.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/resources" for ::1 at 2016-10-31 08:25:46 -0400
+Processing by ResourcesController#index as HTML
+  Rendering resources/index.html.erb within layouts/application
+  [1m[36mResource Load (0.3ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  Rendered resources/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 39ms (Views: 33.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/resources/1" for ::1 at 2016-10-31 08:25:51 -0400
+Processing by ResourcesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mResource Load (0.2ms)[0m  [1m[34mSELECT  "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering resources/show.html.erb within layouts/application
+  Rendered resources/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 39ms (Views: 25.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/resources" for ::1 at 2016-10-31 08:26:05 -0400
+Processing by ResourcesController#index as HTML
+  Rendering resources/index.html.erb within layouts/application
+  [1m[36mResource Load (0.2ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  Rendered resources/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 34ms (Views: 30.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/resources/1" for ::1 at 2016-10-31 08:26:12 -0400
+Processing by ResourcesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mResource Load (0.1ms)[0m  [1m[34mSELECT  "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering resources/show.html.erb within layouts/application
+  Rendered resources/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 34ms (Views: 31.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/resources" for ::1 at 2016-10-31 08:32:51 -0400
+Processing by ResourcesController#index as HTML
+  Rendering resources/index.html.erb within layouts/application
+  [1m[36mResource Load (0.2ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  Rendered resources/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 39ms (Views: 35.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/resources/new" for ::1 at 2016-10-31 08:32:54 -0400
+Processing by ResourcesController#new as HTML
+  Rendering resources/new.html.erb within layouts/application
+  Rendered resources/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 34ms (Views: 30.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/resources" for ::1 at 2016-10-31 08:33:28 -0400
+Processing by ResourcesController#index as HTML
+  Rendering resources/index.html.erb within layouts/application
+  [1m[36mResource Load (0.1ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  Rendered resources/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 31ms (Views: 29.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/resources" for ::1 at 2016-10-31 08:33:29 -0400
+Processing by ResourcesController#index as HTML
+  Rendering resources/index.html.erb within layouts/application
+  [1m[36mResource Load (0.1ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  Rendered resources/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 23ms (Views: 21.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/resources" for ::1 at 2016-10-31 08:33:56 -0400
+Processing by ResourcesController#index as HTML
+  Rendering resources/index.html.erb within layouts/application
+  [1m[36mResource Load (0.2ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  Rendered resources/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 21ms (Views: 18.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/resources/new" for ::1 at 2016-10-31 08:34:33 -0400
+Processing by ResourcesController#new as HTML
+  Rendering resources/new.html.erb within layouts/application
+  Rendered resources/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 33ms (Views: 31.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/resources" for ::1 at 2016-10-31 08:34:36 -0400
+Processing by ResourcesController#index as HTML
+  Rendering resources/index.html.erb within layouts/application
+  [1m[36mResource Load (0.2ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  Rendered resources/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 40ms (Views: 36.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/resources/1" for ::1 at 2016-10-31 08:34:38 -0400
+Processing by ResourcesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mResource Load (0.4ms)[0m  [1m[34mSELECT  "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering resources/show.html.erb within layouts/application
+  Rendered resources/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 33ms (Views: 28.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/resources" for ::1 at 2016-10-31 08:34:40 -0400
+Processing by ResourcesController#index as HTML
+  Rendering resources/index.html.erb within layouts/application
+  [1m[36mResource Load (0.2ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  Rendered resources/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 38ms (Views: 34.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/resources/new" for ::1 at 2016-10-31 08:34:41 -0400
+Processing by ResourcesController#new as HTML
+  Rendering resources/new.html.erb within layouts/application
+  Rendered resources/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 36ms (Views: 32.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/resources/new" for ::1 at 2016-10-31 08:34:53 -0400
+Processing by ResourcesController#new as HTML
+  Rendering resources/new.html.erb within layouts/application
+  Rendered resources/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 32ms (Views: 29.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/resources/new" for ::1 at 2016-10-31 08:34:55 -0400
+Processing by ResourcesController#new as HTML
+  Rendering resources/new.html.erb within layouts/application
+  Rendered resources/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-10-31 08:35:32 -0400
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 31ms (Views: 29.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/resources" for ::1 at 2016-10-31 08:35:35 -0400
+Processing by ResourcesController#index as HTML
+  Rendering resources/index.html.erb within layouts/application
+  [1m[36mResource Load (0.2ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  Rendered resources/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 35ms (Views: 30.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/resources/new" for ::1 at 2016-10-31 08:56:28 -0400
+Processing by ResourcesController#new as HTML
+  Rendering resources/new.html.erb within layouts/application
+  Rendered resources/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 38ms (Views: 35.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/resources" for ::1 at 2016-10-31 08:56:30 -0400
+Processing by ResourcesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I4q2PxuKw4sa9lCAB2euoo55Qlt4e30hUKLyxRMWPzcbZTaD8OZKNIOsH/LMo3xOps5AbwZ3jXcCZoR6f91yFw==", "resource"=>{"title"=>"", "link"=>""}, "commit"=>"Save Resource"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering resources/new.html.erb within layouts/application
+  Rendered resources/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 37ms (Views: 24.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/resources" for ::1 at 2016-10-31 08:56:35 -0400
+Processing by ResourcesController#index as HTML
+  Rendering resources/index.html.erb within layouts/application
+  [1m[36mResource Load (0.2ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  Rendered resources/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 36ms (Views: 25.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/resources/1" for ::1 at 2016-10-31 08:56:37 -0400
+Processing by ResourcesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mResource Load (0.3ms)[0m  [1m[34mSELECT  "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering resources/show.html.erb within layouts/application
+  Rendered resources/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 39ms (Views: 26.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/resources/new" for ::1 at 2016-10-31 08:56:40 -0400
+Processing by ResourcesController#new as HTML
+  Rendering resources/new.html.erb within layouts/application
+  Rendered resources/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 33ms (Views: 29.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/resources" for ::1 at 2016-10-31 08:56:49 -0400
+Processing by ResourcesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/C5aRFtvhdZIH4NuVnDU5DwNHlIYoANYppfW6OR83b3Ewdr4sAMMadFFzBydtAYIFLocZmas8w70U6BXiLeQnQ==", "resource"=>{"title"=>"Rails", "link"=>"rails"}, "commit"=>"Save Resource"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering resources/new.html.erb within layouts/application
+  Rendered resources/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 29ms (Views: 26.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/resources" for ::1 at 2016-10-31 08:56:54 -0400
+Processing by ResourcesController#index as HTML
+  Rendering resources/index.html.erb within layouts/application
+  [1m[36mResource Load (0.2ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  Rendered resources/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 37ms (Views: 33.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/resources" for ::1 at 2016-10-31 08:56:59 -0400
+Processing by ResourcesController#index as HTML
+  Rendering resources/index.html.erb within layouts/application
+  [1m[36mResource Load (0.1ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  Rendered resources/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 35ms (Views: 32.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/resources/new" for ::1 at 2016-10-31 08:59:04 -0400
+Processing by ResourcesController#new as HTML
+  Rendering resources/new.html.erb within layouts/application
+  Rendered resources/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 34ms (Views: 30.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/resources" for ::1 at 2016-10-31 08:59:05 -0400
+Processing by ResourcesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"afT/55WC8KbdXUUYB9+WFbYXUodENkldeJ6kfujO6+JRG39bfu55GUQHCmrMG0T5nqBQszo6uQsqWtLBhAWmwg==", "resource"=>{"title"=>"", "link"=>""}, "commit"=>"Save Resource"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering resources/new.html.erb within layouts/application
+  Rendered resources/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 27ms (Views: 23.8ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/resources" for ::1 at 2016-10-31 08:59:10 -0400
+Processing by ResourcesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WDL8B8p2IhLTPcLCM8XaHfBt7kHM+H3HB/C46nPWNziK2Nz/qaeWDjUCQWlgeb9YXeT776Vo1mtklZ7N0m0YYg==", "resource"=>{"title"=>"", "link"=>""}, "commit"=>"Save Resource"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering resources/new.html.erb within layouts/application
+  Rendered resources/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 38ms (Views: 33.6ms | ActiveRecord: 0.2ms)
+
+

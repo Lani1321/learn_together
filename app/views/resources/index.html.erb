@@ -1,0 +1,19 @@
+<h1>Listing Resources</h1>
+
+<p><%= link_to 'New Resource', new_resource_path %></p>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Link</th>
+  </tr>
+ 
+  <% @resources.each do |resource| %>
+    <tr>
+      <td><%= resource.title %></td>
+      <td><%= resource.link %></td>
+      <td><%= link_to 'Resource', resource_path(resource) %></td>
+    </tr>
+  <% end %>
+</table>
+

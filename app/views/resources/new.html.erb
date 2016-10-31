@@ -1,0 +1,36 @@
+<h1>New Resource</h1> 
+<!-- Use a form builder, provided by a Helper Method form_for to create a form -->
+
+<%= form_for :resource, url: resources_path do |f| %>
+  <!-- We check if there are any errors, with @resources.errors.any?  -->
+   <% if @resource.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@resource.errors.count, "error") %> prohibited
+        this article from being saved:
+      </h2>
+      <ul>
+        <!-- Show a list of errors -->
+        <% @resource.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+
+  <p>
+    <%= f.label :link %><br>
+    <%= f.text_field :link %>
+  </p>
+
+  <p>
+    <%= f.submit %><br>
+  </p>
+  <% end %>
+
+  <%= link_to 'Back', resources_path %>
