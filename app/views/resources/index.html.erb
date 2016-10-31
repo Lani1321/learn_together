@@ -14,6 +14,11 @@
       <td><%= resource.link %></td>
       <td><%= link_to 'Resource', resource_path(resource) %></td>
       <td><%= link_to 'Edit', edit_resource_path(resource) %></td>
+      <!-- We pass the named route as the second argument, and then the options as another argument -->
+      <!-- Used as HTML5 attributes so that when the link is clicked, Rails will first show a confirm dialog to the user, and then submit the link with method delete -->
+      <td><%= link_to 'Delete', resource_path(resource),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
     </tr>
   <% end %>
 </table>
