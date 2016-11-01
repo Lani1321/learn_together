@@ -3,12 +3,46 @@
   <head>
     <title>LearnTogether</title>
     <%= csrf_meta_tags %>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+
   <body>
+
+    <% if notice %>
+        <div id="notice_wrapper">
+            <p class="notice"><%= notice %></p>
+        </div>
+    <% elsif alert %>
+        <div id="notice_wrapper">
+            <p class="alert"><%= alert %></p>    
+        </div>
+    <% end %>
+
+     <%= render 'layouts/navigation' %>
+
+   
     <%= yield %>
-  </body>
+
+    <script>
+        $(document).ready(function() {
+            setTimeout(function() {
+                $('#notice_wrapper').fadeOut("slow", function() {
+                    $(this).remove();
+                });
+            }, 4500);
+        });
+    </script>
+
+   
+
+    </body>
 </html>
+
