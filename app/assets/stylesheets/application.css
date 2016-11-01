@@ -1,3 +1,19 @@
+
+#notice_wrapper {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+  background: rgba(135, 215, 211, 0.85);
+    .notice, .alert {
+      padding: 2.5rem 0;
+      text-align: center;
+      margin: 0;
+      font-size: 1.25rem;
+      color: rgba(255, 255, 255);
+      letter-spacing: 1px;
+    }
+}
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
