@@ -1,4 +1,7 @@
 class ResourcesController < ApplicationController
+  before_action :set_resource, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!, except: [:index, :show] #=>This allows a nonuser to see a list of all the resources but only allows users to add resources
+
 
   def index
     @resources = Resource.all
@@ -11,6 +14,7 @@ class ResourcesController < ApplicationController
 
   def new
     @resource = Resource.new
+    @tags = @resource.tags.build
   end
 
   def edit
@@ -19,9 +23,7 @@ class ResourcesController < ApplicationController
 
 
   def create                #=> params[:attribute] contains the attributes I'm interested in
-    # @resource = Resource.new(params[:resource])
-    # @resource = Resource.new(params.require(:resource).permit(:title, :link))
-    @resource = Resource.new(resource_params)
+    @resource = current_user.resources.new(resource_params)
     # Saves the model in the database, returns a boolean if it's saved or not
     # if @resource.save fails in this situation, we need to show the form back to the user. 
     if @resource.save
@@ -54,8 +56,13 @@ class ResourcesController < ApplicationController
 
   private
 
-  def resource_params
-    params.require(:resource).permit(:title, :link)
-  end
+    def set_resource
+      @resource = Resource.find(params[:id])
+    end
+
+    # added user_id to see if it works
+    def resource_params
+      params.require(:resource).permit(:title, :link, :tag_ids => [], :tags_attributes => [:name])
+    end
 
 end
