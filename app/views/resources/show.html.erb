@@ -8,5 +8,19 @@
   <%= @resource.link %>
 </p>
 
-<%= link_to 'Edit', edit_resource_path(@resource) %>
-<%= link_to 'Back', resources_path %>
+
+<!-- Does this work? -->
+<strong>Topic:</strong>
+  <ul>
+    <% @resource.topics.each do |topic| %>
+    <li><%= topic.name %></li>
+    <% end %>
+  </ul>
+</p>
+
+<!-- Second half of this doesnt actually work -->
+<% if current_user.admin || current_user == @resource.user %>
+  <%= link_to 'Edit', edit_resource_path(@resource) %>
+<% else %>
+  <%= link_to 'Back', resources_path %>
+  <% end %>
