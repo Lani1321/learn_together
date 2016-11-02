@@ -13,8 +13,9 @@ class ResourcesController < ApplicationController
   end
 
   def new
+    @user = current_user
     @resource = Resource.new
-    @tags = @resource.tags.build
+    @topics = @resource.topics.build
   end
 
   def edit
@@ -39,19 +40,28 @@ class ResourcesController < ApplicationController
 
   def update
     @resource = Resource.find(params[:id])
-    if @resource.update(resource_params)
-      redirect_to @resource
+    # if @resource.update(resource_params)
+    if !current_user
+      redirect_to new_user_session_path, alert: "You must be the author in order to edit a resource."
+    elsif current_user != @resource.user
+      redirect_to :back, alert: "You must be the author in order to edit a resource."
     else
-      render 'edit'
+      @resource.update(resource_params)
+      redirect_to resource_path(@resource)
     end
   end
+      
 
   # Don't need to add a view for this action since we're redirecting to the index action
   def destroy
-    @resource = Resource.find(params[:id])
-    @resource.destroy
-   
-    redirect_to resources_path
+    if !current_user
+      redirect_to new_user_session_path, alert: "You must be the author in order to delete a resource."
+    elsif current_user != @resource.user
+      redirect_to :back, alert: "You must be the author in order to delete a resource."
+    else
+      @resource.destroy
+      redirect_to resources_path
+    end
   end
 
   private
@@ -62,7 +72,7 @@ class ResourcesController < ApplicationController
 
     # added user_id to see if it works
     def resource_params
-      params.require(:resource).permit(:title, :link, :tag_ids => [], :tags_attributes => [:name])
+      params.require(:resource).permit(:title, :link, :topic_ids => [], :topics_attributes => [:name])
     end
 
 end
