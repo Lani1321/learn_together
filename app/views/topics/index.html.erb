@@ -1,0 +1,44 @@
+
+<!-- 
+<div class="container-fluid">
+  <div class="content"> -->
+    <!-- <h1>Learn Topics</h1> -->
+
+
+<div class="container">
+  <% @topics.each do |topic| %>
+    <div class="col-xs-3">
+      <%= link_to topic_path(topic) do %>
+        <div class="thumbnail">
+          <img class="thumb-img-top" src="..." alt="Card image cap">
+          <div class="caption">
+            <h4 class="thumb-title"><%= topic.name %></h4>
+            <p class="thumb-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      <% end %>
+    </div>  
+  <% end %>  
+</div>
+
+<!--     <br> -->
+  <!-- </div>  --><!-- close of content -->
+<!-- </div> --> <!-- close of container-fluid -->
+
+<%= link_to 'New Topic', new_topic_path %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-3 test-grid-element"></div>
+    <div class="col-xs-3 test-grid-element"></div>
+    <div class="col-xs-3 test-grid-element"></div>
+    <div class="col-xs-3 test-grid-element"></div>
+  </div> <!-- end of row -->
+</div>
+
+<a href="gohere.com">
+  div
+
+
+</a>
