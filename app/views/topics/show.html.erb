@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p> <%= @topic.name %> </p>
+<ul>
+    <% @topic.resources.each do |resource| %>
+      <li> <%= link_to resource.title, resource_path(resource) %> </li>
+    <% end %>
+</ul>
+
+<%= link_to 'Back', resources_path %>
+
+
+<!-- shows all the topics 
+
+This has all the data for my specific topic  -->
