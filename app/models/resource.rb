@@ -5,4 +5,5 @@ class Resource < ApplicationRecord
   accepts_nested_attributes_for :topics, reject_if: lambda {|attributes| attributes['name'].blank?}
   validates :title, presence: true
   validates :link, :format => URI::regexp(%w(http https))
+
 end
