@@ -4,25 +4,14 @@ class ResourcesController < ApplicationController
 
 
   def index
-    @resources = Resource.all
+    @resources = Resource.all 
   end
 
   def show
     # Find the resource we're interested in, passing in params[:id] to get the :id parameter from the request
     @resource = Resource.find(params[:id])
   end
-
-  def new
-    @user = current_user
-    @resource = Resource.new
-    @topics = @resource.topics.build
-  end
-
-  def edit
-    @resource = Resource.find(params[:id])
-  end
-
-
+  
   def create                #=> params[:attribute] contains the attributes I'm interested in
     @resource = current_user.resources.new(resource_params)
     # Saves the model in the database, returns a boolean if it's saved or not
@@ -38,6 +27,16 @@ class ResourcesController < ApplicationController
     end
   end
 
+  def new
+    @user = current_user
+    @resource = Resource.new
+    @topics = @resource.topics.build
+  end
+
+  def edit
+    @resource = Resource.find(params[:id])
+  end
+
   def update
     @resource = Resource.find(params[:id])
     # if @resource.update(resource_params)
@@ -51,7 +50,6 @@ class ResourcesController < ApplicationController
     end
   end
       
-
   # Don't need to add a view for this action since we're redirecting to the index action
   def destroy
     if !current_user
