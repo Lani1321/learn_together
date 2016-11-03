@@ -3,42 +3,49 @@
 
 <% if @topic.name == "Object Oriented Ruby" %>
   <div class="jumbotron jumbotron-1">
+    <%= image_tag("gem.png") %>
     <h1><%= @topic.name %></h1> 
   </div>
 
 <% elsif @topic.name == "Rack" %>
   <div class="jumbotron jumbotron-2">
+    <%= image_tag("rack.png") %>
     <h1><%= @topic.name %></h1>
   </div> 
 
 <% elsif @topic.name == "ActiveRecord" %>
   <div class="jumbotron jumbotron-3">
-  <h1><%= @topic.name %></h1>
+    <%= image_tag("database.png") %>
+    <h1><%= @topic.name %></h1>
   </div> 
 
  <% elsif @topic.name == "Sinatra" %>
   <div class="jumbotron jumbotron-4">
+    <%= image_tag("sinatra.png") %>
     <h1><%= @topic.name %></h1>
   </div> 
 
  <% elsif @topic.name == "Rails" %>
   <div class="jumbotron jumbotron-5">
+    <%= image_tag("rails.png") %>
     <h1><%= @topic.name %></h1>
   </div> 
 
  <% elsif @topic.name == "Javascript" %>
   <div class="jumbotron jumbotron-6">
+    <%= image_tag("javascript.png") %>
     <h1><%= @topic.name %></h1>
   </div> 
 
   <% elsif @topic.name == "Angular" %>
     <div class="jumbotron jumbotron-7">
+      <%= image_tag("angular.png") %>
       <h1><%= @topic.name %></h1>
     </div> 
 
-
  <% elsif @topic.name == "HTML and CSS" %>
     <div class="jumbotron jumbotron-8">
+    <%= image_tag("html_css.png") %>
       <h1><%= @topic.name %></h1>
    </div> 
 
