@@ -71,6 +71,54 @@
   height: 75px;
 }
 
+.caption {
+  .thumb-title{
+    text-align: center;
+    color: #000000;
+    padding-top: 1rem;
+    padding-bottom: .5rem;
+  }
+}
+
+.caption {
+ .thumb-text{
+    text-align: center;
+    color: #aaa8ad;
+    letter-spacing: 2px;
+    padding-bottom: 10rem;
+  }
+}
+
+.thumbnail {
+  padding-bottom: 2rem;
+}
+
+.thumbnail-header {
+  .topic-img {
+    width: 65px;
+    height: 65px;
+    background: white;
+    border-radius: 5px;
+    padding: 5px;
+    position: relative;
+    top: 50%;
+    border: 7px solid White;
+    margin: auto;
+  }
+}
+
+.thumbnail-2 {
+  padding: 0 0 15px 0;
+  border: none;
+  border-radius: 0;
+  margin: 20px;
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 10px;
+}
 
 /*############# TOPICS ############# */
 .Ruby {
