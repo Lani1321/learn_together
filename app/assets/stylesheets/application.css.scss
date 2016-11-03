@@ -106,3 +106,35 @@
   }
 } 
 
+.ActiveRecord {
+  .thumbnail-header{
+    background-color: #2ecc71;
+    .topic-img {
+      background-image: url(database.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.Rails {
+  .thumbnail-header{
+    background-color: #D20000;
+    .topic-img {
+      background-image: url(rails.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.Javascript {
+  .thumbnail-header{
+    background-color: #F7DF1E;
+    .topic-img {
+      background-image: url(javascript.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+}
