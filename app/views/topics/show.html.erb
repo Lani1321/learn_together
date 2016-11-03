@@ -1,15 +1,58 @@
 <p id="notice"><%= notice %></p>
+<!-- This page shows all of the resources for a topic -->
 
-<p> <%= @topic.name %> </p>
-<ul>
-    <% @topic.resources.each do |resource| %>
-      <li> <%= link_to resource.title, resource_path(resource) %> </li>
-    <% end %>
-</ul>
+<% if @topic.name == "Object Oriented Ruby" %>
+  <div class="jumbotron jumbotron-1">
+    <h1><%= @topic.name %></h1> 
+  </div>
+
+<% elsif @topic.name == "Rack" %>
+  <div class="jumbotron jumbotron-2">
+    <h1><%= @topic.name %></h1>
+  </div> 
+
+<% elsif @topic.name == "ActiveRecord" %>
+  <div class="jumbotron jumbotron-3">
+  <h1><%= @topic.name %></h1>
+  </div> 
+
+ <% elsif @topic.name == "Sinatra" %>
+  <div class="jumbotron jumbotron-4">
+    <h1><%= @topic.name %></h1>
+  </div> 
+
+ <% elsif @topic.name == "Rails" %>
+  <div class="jumbotron jumbotron-5">
+    <h1><%= @topic.name %></h1>
+  </div> 
+
+ <% elsif @topic.name == "Javascript" %>
+  <div class="jumbotron jumbotron-6">
+    <h1><%= @topic.name %></h1>
+  </div> 
+
+  <% elsif @topic.name == "Angular" %>
+    <div class="jumbotron jumbotron-7">
+      <h1><%= @topic.name %></h1>
+    </div> 
+
+
+ <% elsif @topic.name == "HTML and CSS" %>
+    <div class="jumbotron jumbotron-8">
+      <h1><%= @topic.name %></h1>
+   </div> 
+
+
+
+<% end %>
+
+
+
 
 <%= link_to 'Back', resources_path %>
 
 
-<!-- shows all the topics 
 
-This has all the data for my specific topic  -->
+
+
+
