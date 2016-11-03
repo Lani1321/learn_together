@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   # root 'welcome#index'
   root 'topics#index'
 
+
   # I only needed this route when I was using just Oauth
   # get "/auth/:provider/callback" => "sessions#create"
 
