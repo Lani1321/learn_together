@@ -48,6 +48,32 @@
 
 
 
+<div class="container-fluid">
+  <div id="resource-table">
+    <table class="table">
+      <caption>Resources</caption>
+      <thead>
+        <tr>
+          <th><%= @topic.name %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <% @topic.resources.each do |resource| %>
+          <td><%= link_to resource.title, resource_path(resource) %></td>
+        </tr>
+
+      </tbody>
+      <% end %>
+    </table>
+ 
+  </div>
+</div> <!-- end of container -->
+
+<p></p>
+<br>
+<br>
+<br>
 
 <%= link_to 'Back', resources_path %>
 
