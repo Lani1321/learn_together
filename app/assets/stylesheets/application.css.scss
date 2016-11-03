@@ -38,9 +38,13 @@
 
 }
 
+.navbar-right {
+  padding-top: 12px;
+}
+
 .navbar-brand {
   img {
-    width: 70px;
+    width: 83px;
   }
 }
 
@@ -56,8 +60,8 @@
 
 .welcome-header {
   text-align: center;
-  padding-bottom: 10rem;
-  padding-top: 10rem;
+  padding-bottom: 50px;
+  padding-top: 100px;
   letter-spacing: 1px;
 }
 
@@ -65,6 +69,7 @@
   text-align: center;
   color: #aaa8ad;
   letter-spacing: 2px;
+  margin: 30px;
 }
 
 .thumbnail-header {
@@ -280,3 +285,9 @@
   }*/
 
 
+.header-logo {
+  margin-top: 35px;
+  img {
+    width: 450px;
+  }
+}
