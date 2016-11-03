@@ -138,3 +138,28 @@
     }
   }
 }
+
+.Sinatra {
+  .thumbnail-header{
+    background-color: #333;
+    .topic-img {
+      background-image: url(sinatra.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+  }
+}
+
+.Angular {
+  .thumbnail-header{
+    background-color: #C30E2E;
+    .topic-img {
+      background-image: url(angular.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+
