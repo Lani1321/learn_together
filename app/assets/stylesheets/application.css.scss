@@ -1,0 +1,47 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+/*@import "bootstrap/thumbnails";*/
+
+
+#notice_wrapper {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10000;
+  background: rgba(135, 215, 211, 0.85);
+    .notice, .alert {
+      padding: 2.5rem 0;
+      text-align: center;
+      margin: 0;
+      font-size: 1.25rem;
+      color: #FFFFFF;
+      letter-spacing: 1px;
+    }
+}
+
+.navbar {
+    margin-bottom: 0;
+    background-color: #eeeeee;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    height: 75px;
+    box-shadow: 0px 10px 25px -10px rgba(0,0,0,0.45);
+    
+}
+
+.navbar li a, .navbar .navbar-brand {
+    color: #555 !important;
+
+}
+
+.navbar-brand {
+  img {
+    width: 70px;
+  }
+}
+
+
