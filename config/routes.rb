@@ -7,9 +7,13 @@ Rails.application.routes.draw do
   # :resources is the different articles/sites that users post 
   resources :resources
 
+  post "/vote" => "resources#vote"
+  patch "/vote" => "resources#vote"
+
   resources :users
 
-  resources :topics
+  resources :topics 
+  
 
   # root 'welcome#index'
   root 'topics#index'
@@ -22,5 +26,6 @@ Rails.application.routes.draw do
   # get '/auth/github/callback' => 'sessions#create'
 
   delete '/resources', to: 'resources#destroy'
+
 
 end
