@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable,
      :omniauthable, :omniauth_providers => [:github]
 
-  has_many :resources
+has_many :resources
 
   def self.from_omniauth(auth)
      where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
@@ -15,7 +15,7 @@ class User < ApplicationRecord
       user.password = Devise.friendly_token[0,20]
     end
   end
-# delete if doesnt work
+
     def self.new_with_session(params, session)
       if session["devise.user_attributes"]
         new(session["devise.user_attributes"], without_protection: true) do |user|
