@@ -1,26 +1,49 @@
-<p>
-  <strong>Title:</strong>
-  <%= @resource.title %>
-</p>
- 
-<p>
-  <strong>Link:</strong>
-  <%= @resource.link %>
-</p>
 
+<!-- Do I really want this page? -->
 
-<!-- Does this work? -->
-<strong>Topic:</strong>
-  <ul>
-    <% @resource.topics.each do |topic| %>
-    <li><%= topic.name %></li>
+<div class="jumbotron jumbotron-1">
+  <%= image_tag("brackets.png") %>
+  <p>
+    <strong>Title of Resource:</strong>
+    <%= @resource.title %>
+  </p>
+  <strong>Topic:</strong>
+   <% @resource.topics.each do |topic| %>
+    <%= topic.name %>
     <% end %>
-  </ul>
-</p>
+</div>
+ 
+ <div class="container-fluid bg-grey text-center">
+  <div class="section-subtitle">
+    <p><strong>Link:</strong>  </p>
+    <%= @resource.link %>
+  </div>
+</div>
 
-<!-- Second half of this doesnt actually work -->
+
 <% if current_user.admin || current_user == @resource.user %>
   <%= link_to 'Edit', edit_resource_path(@resource) %>
+
 <% else %>
   <%= link_to 'Back', resources_path %>
   <% end %>
+
+
+<%= @resource.vote_score %>
+
+
+<%= form_for @resource, :url => url_for(:controller => 'resources', :action => 'vote', method: "post") do |f| %>
+  <div class="field">
+    <%= f.hidden_field(:resource_id, value: @resource.id) %> 
+    <%= f.submit "Upvote" %>   
+  </div>
+<% end %>
+
+<%= form_for @resource, :url => url_for(:controller => 'resources', :action => 'vote', method: "post") do |f| %>
+  <div class="field">
+    <%= f.hidden_field(:resource_id, value: @resource.id) %>
+    <%= f.submit "Downvote" %>   
+  </div>
+<% end %> 
+
+
