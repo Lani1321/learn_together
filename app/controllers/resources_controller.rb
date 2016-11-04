@@ -5,13 +5,24 @@ class ResourcesController < ApplicationController
 
   def index
     @resources = Resource.all 
+
   end
 
   def show
     # Find the resource we're interested in, passing in params[:id] to get the :id parameter from the request
     @resource = Resource.find(params[:id])
   end
-  
+
+  def vote
+    resource = Resource.find(params[:resource][:resource_id])
+    if params[:commit] == "Upvote"
+      resource.votes.create(vote_value: 1)
+    else
+      resource.votes.create(vote_value: -1)
+    end
+    redirect_to :back
+  end
+
   def create                #=> params[:attribute] contains the attributes I'm interested in
     @resource = current_user.resources.new(resource_params)
     # Saves the model in the database, returns a boolean if it's saved or not
