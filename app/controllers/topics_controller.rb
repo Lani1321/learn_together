@@ -5,8 +5,8 @@ class TopicsController < ApplicationController
   end
   
   def show              #=> learntogether.com/topic/1
+    @topics = Topic.all
     @topic = Topic.find(params[:id])
   end
 
 end
-
