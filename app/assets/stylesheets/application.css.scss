@@ -54,6 +54,10 @@
     padding-left: 30px;
 }
 
+.form {
+  margin-top: 100px;
+}
+
 .content {
     display: block;
 }
@@ -290,4 +294,12 @@
   img {
     width: 450px;
   }
+}
+
+.divider {
+  label {  
+   letter-spacing: 1px;
+   margin-right: 20px;
+   display:inline-block;
+ }
 }
