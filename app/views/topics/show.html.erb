@@ -64,9 +64,32 @@
       <tbody>
         <tr>
           <% @topic.resources.each do |resource| %>
-
           <td><%= link_to resource.title, resource.link %></td>
+
+          <td><%= resource.vote_score %></td>
+
+          <td><%= form_for resource, :url => url_for(:controller => 'resources', :action => 'vote', method: "post") do |f| %>
+          <div class="input-group">
+            <%= f.hidden_field(:resource_id, class: 'form-control', value: resource.id) %> 
+            <span class="input-group-addon">
+              <span class="glyphicon glyphicon-thumbs-up"></span>
+              <%= f.submit "Upvote" %> 
+            </span>
+          </div>
+         <% end %>
+
+        <%= form_for resource, :url => url_for(:controller => 'resources', :action => 'vote', method: "post") do |f| %>
+          <div class="input-group">
+            <%= f.hidden_field(:resource_id, value: resource.id) %>
+            <span class="input-group-addon">
+              <span class="glyphicon glyphicon-thumbs-down"></span>
+            <%= f.submit "Downvote" %> 
+            </span>  
+          </div>
+        <% end %></td>
+
           <% if current_user.admin || current_user == resource.user %>
+
           <td><%= link_to "Delete", resource, :method => :delete, :confirm => "Are you sure ?"%></td>
         </tr>
         <% end %>
@@ -81,6 +104,7 @@
 <br>
 <br>
 <br>
+
 
 
 
