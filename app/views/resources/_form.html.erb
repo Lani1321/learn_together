@@ -1,4 +1,7 @@
 <!-- Use a form builder, provided by a Helper Method form_for to create a form -->
+
+
+<div class="container-fluid form text-center ">
 <%= form_for @resource do |f| %>
   
   <!-- We check if there are any errors, with @resources.errors.any?  -->
@@ -18,23 +21,28 @@
   <% end %>
  
   <p>
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.label "Name Your Resource:", class: 'h1 ' %><br>
+    <%= f.text_field :title, class: 'form-control' %>
   </p>
  
   <p>
     <%= f.label :link %><br>
-    <%= f.text_area :link %>
+    <%= f.text_area :link, class: 'form-control' %>
   </p>
 
 
 
   <h3>Associate your resource with a Learn Topic:</h3>
-
-    <%= f.collection_check_boxes :topic_ids, Topic.all, :id, :name %><br>
+    <div class="divider">
+    <!--   <div class="label"> -->
+      <%= f.collection_check_boxes :topic_ids, Topic.all, :id, :name %><br>
+<!--       </div>
+ -->    </div>
 
   <div class="actions">
     <p><%= f.submit %></p>
   </div>
 
 <% end %>
+
+</div>
