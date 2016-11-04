@@ -48,9 +48,6 @@
     <%= image_tag("html_css.png") %>
       <h1><%= @topic.name %></h1>
    </div> 
-
-
-
 <% end %>
 
 
@@ -67,9 +64,12 @@
       <tbody>
         <tr>
           <% @topic.resources.each do |resource| %>
-          <td><%= link_to resource.title, resource_path(resource) %></td>
-        </tr>
 
+          <td><%= link_to resource.title, resource.link %></td>
+          <% if current_user.admin || current_user == resource.user %>
+          <td><%= link_to "Delete", resource, :method => :delete, :confirm => "Are you sure ?"%></td>
+        </tr>
+        <% end %>
       </tbody>
       <% end %>
     </table>
@@ -81,10 +81,6 @@
 <br>
 <br>
 <br>
-
-<%= link_to 'Back', resources_path %>
-
-
 
 
 
