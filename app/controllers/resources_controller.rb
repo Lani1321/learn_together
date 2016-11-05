@@ -4,7 +4,7 @@ class ResourcesController < ApplicationController
 
 
   def index
-    @resources = Resource.all 
+    @resources = Resource.order("title")
 
   end
 
@@ -13,14 +13,34 @@ class ResourcesController < ApplicationController
     @resource = Resource.find(params[:id])
   end
 
-  def vote
+  def upvote
     resource = Resource.find(params[:resource][:resource_id])
-    if params[:commit] == "Upvote"
-      resource.votes.create(vote_value: 1)
-    else
-      resource.votes.create(vote_value: -1)
+    # binding.pry
+    if resource.already_voted?(current_user.id)
+      # binding.pry
+      resource.no_vote
+      redirect_to :back, notice: "You can't vote for the same resource more than once"
+      return
+    else 
+      # binding.pry
+      resource.votes.create(vote_value: 1, user_id: current_user.id)
     end
-    redirect_to :back
+    redirect_to :back, notice: "You've successfully voted for this resource"
+  end
+
+  def downvote
+    resource = Resource.find(params[:resource][:resource_id])
+    # binding.pry
+    if resource.already_voted?(current_user.id)
+      # binding.pry
+      resource.no_vote
+      redirect_to :back, notice: "You can't vote for the same #{resource.title} more than once"
+      return
+    else 
+      # binding.pry
+      resource.votes.create(vote_value: -1, user_id: current_user.id)
+    end
+    redirect_to :back, notice: "You've successfully voted for this #{resource.title}"
   end
 
   def create                #=> params[:attribute] contains the attributes I'm interested in
