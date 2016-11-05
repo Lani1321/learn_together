@@ -7,8 +7,11 @@ Rails.application.routes.draw do
   # :resources is the different articles/sites that users post 
   resources :resources
 
-  post "/vote" => "resources#vote"
-  patch "/vote" => "resources#vote"
+  post "/upvote" => "resources#upvote"
+  patch "/upvote" => "resources#upvote"
+
+  post "/downvote" => "resources#downvote"
+  patch "/downvote" => "resources#downvote"
 
   resources :users
 
