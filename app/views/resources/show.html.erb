@@ -30,16 +30,14 @@
 
 
 <%= @resource.vote_score %>
-
-
-<%= form_for @resource, :url => url_for(:controller => 'resources', :action => 'vote', method: "post") do |f| %>
+<%= form_for @resource, :url => url_for(:controller => 'resources', :action => 'upvote', method: "post") do |f| %>
   <div class="field">
     <%= f.hidden_field(:resource_id, value: @resource.id) %> 
     <%= f.submit "Upvote" %>   
   </div>
 <% end %>
 
-<%= form_for @resource, :url => url_for(:controller => 'resources', :action => 'vote', method: "post") do |f| %>
+<%= form_for @resource, :url => url_for(:controller => 'resources', :action => 'downvote', method: "post") do |f| %>
   <div class="field">
     <%= f.hidden_field(:resource_id, value: @resource.id) %>
     <%= f.submit "Downvote" %>   
