@@ -5,5 +5,4 @@ class Topic < ApplicationRecord
   def num_of_resources
     self.resources.count
   end
-
 end
