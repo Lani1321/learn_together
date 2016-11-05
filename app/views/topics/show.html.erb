@@ -50,8 +50,6 @@
    </div> 
 <% end %>
 
-
-
 <div class="container-fluid">
   <div id="resource-table">
     <table class="table">
@@ -67,21 +65,21 @@
           <td><%= link_to resource.title, resource.link %></td>
 
           <td><%= resource.vote_score %></td>
+           <td><%= resource.order_by_votes %></td>
 
-          <td><%= form_for resource, :url => url_for(:controller => 'resources', :action => 'vote', method: "post") do |f| %>
-          <div class="input-group">
-            <%= f.hidden_field(:resource_id, class: 'form-control', value: resource.id) %> 
-            <span class="input-group-addon">
-              <span class="glyphicon glyphicon-thumbs-up"></span>
-              <%= f.submit "Upvote" %> 
-            </span>
-          </div>
-         <% end %>
 
-        <%= form_for resource, :url => url_for(:controller => 'resources', :action => 'vote', method: "post") do |f| %>
+          <td><%= form_for resource, :url => url_for(:controller => 'resources', :action => 'upvote', method: "post") do |f| %>
+            <div class="input-group">           
+              <%= f.hidden_field(:resource_id, value: resource.id) %> 
+
+                <span class="glyphicon glyphicon-thumbs-up"></span>
+            <%= f.submit "Upvote" %> 
+            </div>
+          <% end %>
+
+        <%= form_for resource, :url => url_for(:controller => 'resources', :action => 'downvote', method: "post") do |f| %>
           <div class="input-group">
             <%= f.hidden_field(:resource_id, value: resource.id) %>
-            <span class="input-group-addon">
               <span class="glyphicon glyphicon-thumbs-down"></span>
             <%= f.submit "Downvote" %> 
             </span>  
