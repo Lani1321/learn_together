@@ -5,7 +5,7 @@ Rails.application.routes.draw do
                      :path_names => { :sign_up => "register" }
 
   # :resources is the different articles/sites that users post 
-  resources :resources
+  resources :resources 
 
   post "/upvote" => "resources#upvote"
   patch "/upvote" => "resources#upvote"
@@ -15,8 +15,10 @@ Rails.application.routes.draw do
 
   resources :users
 
-  resources :topics 
-  
+  resources :topics do
+    get "/resources/new" => "topics#new_resource"
+    post "resources/new" => "topics#create_resource"
+  end
 
   # root 'welcome#index'
   root 'topics#index'
@@ -29,6 +31,7 @@ Rails.application.routes.draw do
   # get '/auth/github/callback' => 'sessions#create'
 
   delete '/resources', to: 'resources#destroy'
+  delete '/resources', to: 'topics#destroy'
 
 
 end
