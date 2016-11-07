@@ -16,28 +16,6 @@ class Resource < ApplicationRecord
     score
   end
 
-  def add_vote
-    score = 0
-    votes.each do |vote|
-      score + vote.vote_value
-    end
-    score
-  end
-
-  def subtract_vote
-    score = 0
-    votes.each do |vote|
-      score - vote.vote_value
-    end
-    score
-  end
-
-
-  def order_by_votes
-    self.votes.count
-  end
-
-
 
   def no_vote 
     score = 0
@@ -49,32 +27,12 @@ class Resource < ApplicationRecord
                     #=> key that represents the column on the votes table
                               #=>argument we pass through 
      # if something is there, then it will return an array of vote instances, if not it will be empty
-      if self.votes.where(user_id: user_id).empty?
-        false
-      else
-        true
-      end
-
+    if self.votes.where(user_id: user_id).empty?
+      false
+    else
+      true
+    end
   end
-
-  def most_votes
-    @resource = Resource.joins(:votes).select('resources.*, COUNT(votes.id) AS vote_value').group('votes.resources_id').order('vote_value DESC')
-
-  end
-
-
 
 end
-
-
-
-  # def self.by_votes
-  #   select('resources.*, coalesce(value, 0) as votes')
-  #   joins('left join resource_votes on resource_id=resources.id')
-  #   order('votes desc')
-  # end
-
-  # def votes 
-  #   read_attributes(:votes) || resource_votes.sum(:value)
-  # end
 
