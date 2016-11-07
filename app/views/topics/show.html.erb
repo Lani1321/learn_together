@@ -53,55 +53,42 @@
 <div class="container-fluid">
   <div id="resource-table">
     <table class="table">
-      <caption>Resources</caption>
       <thead>
         <tr>
-          <th><%= @topic.name %></th>
+          <th><%= @topic.name %> Resources</th>
         </tr>
-      </thead>
+       </thead>
+
       <tbody>
+        
+      <% @resources.each do |resource| %>
         <tr>
-          <% @topic.resources.each do |resource| %>
           <td><%= link_to resource.title, resource.link %></td>
-
-          <td><%= resource.vote_score %></td>
-           <td><%= resource.order_by_votes %></td>
-
-
+          <td><%= pluralize(Vote.total_votes(resource.id), "vote") %></td>
           <td><%= form_for resource, :url => url_for(:controller => 'resources', :action => 'upvote', method: "post") do |f| %>
-            <div class="input-group">           
-              <%= f.hidden_field(:resource_id, value: resource.id) %> 
-
-                <span class="glyphicon glyphicon-thumbs-up"></span>
-            <%= f.submit "Upvote" %> 
-            </div>
-          <% end %>
-
-        <%= form_for resource, :url => url_for(:controller => 'resources', :action => 'downvote', method: "post") do |f| %>
-          <div class="input-group">
-            <%= f.hidden_field(:resource_id, value: resource.id) %>
-              <span class="glyphicon glyphicon-thumbs-down"></span>
-            <%= f.submit "Downvote" %> 
-            </span>  
-          </div>
-        <% end %></td>
-
-          <% if current_user.admin || current_user == resource.user %>
-
-          <td><%= link_to "Delete", resource, :method => :delete, :confirm => "Are you sure ?"%></td>
-        </tr>
+                <%= f.hidden_field(:resource_id, value: resource.id) %>  
+                <%= f.submit "Upvote", :class => 'button' %> 
+              <% end %>
+          </td>
+        <% if current_user.admin || current_user == resource.user %>
+          <td><%= link_to "Delete", resource_path(resource), method: :delete, data: { confirm: 'Are you sure?' } %></td>  
+          <td><%= link_to "Edit", edit_resource_path(resource) %></td>
         <% end %>
-      </tbody>
-      <% end %>
+      </tr>
+    <% end %> <!-- end of resources loop -->
+  
+      </tbody>  
     </table>
- 
-  </div>
+  </div><!--  end of resource table -->
 </div> <!-- end of container -->
 
 <p></p>
 <br>
 <br>
 <br>
+
+<%= link_to "new resource", topic_resources_new_path(@topic) %>
+
 
 
 
