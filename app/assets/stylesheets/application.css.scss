@@ -126,6 +126,9 @@ a {
   border: none;
   border-radius: 0;
   margin: 20px;
+  img {
+    width: 50%;
+  }
 }
 
 .thumbnail img {
@@ -223,6 +226,8 @@ a {
     }
   }
 }
+
+
 
 
 #resource-table {
