@@ -17,3 +17,4 @@ html = Topic.create(:name => "HTML and CSS")
 shopping_cart_video = Resource.create(:user_id => molly.id, :title => "Shopping Cart Video", :link => "http://stackoverflow.com/questions/7167895/whats-a-good-way-to-validate-links-urls-in-rails")
 
 ResourceTopic.create(:topic_id => html.id, :resource_id => shopping_cart_video.id)
+
