@@ -1,0 +1,18 @@
+<h2><%= @resource.title %></h2>
+
+<%= @resource.vote_score %>
+
+
+<%= form_for(@resource) do |f| %>
+  <div class="field">
+    <%= f.hidden_field(:resource_id, value: @resource.id) %> 
+    <%= f.submit "Upvote" %>   
+  </div>
+<% end %>
+
+<%= form_for(@resource) do |f| %>
+  <div class="field">
+    <%= f.hidden_field(:resource_id, value: @resource.id) %>
+    <%= f.submit "Downvote" %>   
+  </div>
+<% end %>
