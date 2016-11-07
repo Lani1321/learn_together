@@ -1,6 +1,9 @@
-<h1>New Resource</h1> 
+<div class="jumbotron jumbotron-10">
+    <%= image_tag("code-text.png") %>
+    <h1>Add a New Resource</h1>
+  </div> 
 
+
+<div class="jumbotron-signin">
 <%= render 'form' %>
-
-<%= link_to 'Back', resources_path %>
-<%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+</div>
