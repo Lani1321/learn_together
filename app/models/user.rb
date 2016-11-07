@@ -6,7 +6,6 @@ class User < ApplicationRecord
      :omniauthable, :omniauth_providers => [:github]
 
 has_many :resources
-# delete this if it doesnt work
 has_many :votes
 
   def self.from_omniauth(auth)
@@ -18,16 +17,16 @@ has_many :votes
     end
   end
 
-    def self.new_with_session(params, session)
-      if session["devise.user_attributes"]
-        new(session["devise.user_attributes"], without_protection: true) do |user|
-          user.attributes = params
-          user.valid?
-        end
-      else
-        super
+  def self.new_with_session(params, session)
+    if session["devise.user_attributes"]
+      new(session["devise.user_attributes"], without_protection: true) do |user|
+        user.attributes = params
+        user.valid?
       end
+    else
+      super
     end
+  end
 
 
 end
