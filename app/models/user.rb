@@ -9,6 +9,7 @@ has_many :resources
 has_many :votes
 
   def self.from_omniauth(auth)
+    puts "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n#{auth}\n\n\n\n\n\n\n\n\n\n\n\n\n"
      where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.provider = auth.provider
       user.uid = auth.uid
