@@ -1,48 +1,68 @@
 <!-- Use a form builder, provided by a Helper Method form_for to create a form -->
 
-
 <div class="container-fluid form text-center ">
+<!-- <div class="span6 widget-span widget-type-form"> -->
 <%= form_for @resource do |f| %>
   
   <!-- We check if there are any errors, with @resources.errors.any?  -->
   <% if @resource.errors.any? %>
-    <div id="error_explanation">
+    <div class="alert alert-danger" role="alert">
       <h2>
         <%= pluralize(@resource.errors.count, "error") %> prohibited
         this resource from being saved:
       </h2>
-      <ul>
+    
         <!-- Show a list of errors -->
         <% @resource.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
+          <p><%= msg %></p>
         <% end %>
-      </ul>
+     
     </div>
   <% end %>
  
   <p>
-    <%= f.label "Name Your Resource:", class: 'h1 ' %><br>
+    <%= f.label "Name Your Resource:", class: 'h3' %><br>
     <%= f.text_field :title, class: 'form-control' %>
   </p>
  
+
   <p>
-    <%= f.label :link %><br>
+    <%= f.label "Provide the url:", class: 'h3' %><br>
     <%= f.text_area :link, class: 'form-control' %>
   </p>
 
-
-
-  <h3>Associate your resource with a Learn Topic:</h3>
+    <h3>Associate your resource with a Learn Topic:</h3>
     <div class="divider">
+      <div class="section-subtitle">
     <!--   <div class="label"> -->
       <%= f.collection_check_boxes :topic_ids, Topic.all, :id, :name %><br>
-<!--       </div>
- -->    </div>
+      </div>
+    </div>
 
+  <% if current_user.admin %>
+    <%= f.fields_for :topics, @resource.topics.build do |topics_fields| %>
+    <%= topics_fields.label "Make your own topic:" %>
+    <%= topics_fields.text_field :name %>
+    
+  <% end %>
+  <% end %>
+
+   <br> 
   <div class="actions">
-    <p><%= f.submit %></p>
+    <p><%= f.submit "Create Resource", :class => 'button' %></p>
   </div>
 
-<% end %>
+<% end %> <!-- end of form  -->
+<br>
 
 </div>
+
+    <script>
+        $(document).ready(function() {
+            setTimeout(function() {
+                $('.alert').fadeOut("slow", function() {
+                    $(this).remove();
+                });
+            }, 4500);
+        });
+    </script>
