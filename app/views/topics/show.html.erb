@@ -63,7 +63,7 @@
         
       <% @resources.each do |resource| %>
         <tr>
-          <td><%= link_to resource.title, resource.link %></td>
+          <td><%= link_to resource.title, resource.link, :target => "_blank" %></td>
           <td><%= pluralize(Vote.total_votes(resource.id), "vote") %></td>
           <td><%= form_for resource, :url => url_for(:controller => 'resources', :action => 'upvote', method: "post") do |f| %>
                 <%= f.hidden_field(:resource_id, value: resource.id) %>  
@@ -72,7 +72,7 @@
           </td>
         <% if current_user.admin || current_user == resource.user %>
           <td><%= link_to "Delete", resource_path(resource), method: :delete, data: { confirm: 'Are you sure?' } %></td>  
-          <td><%= link_to resource.title, resource.link, :target => "_blank" %></td>
+          <td><%= link_to "Edit", edit_resource_path(resource) %></td>
         <% end %>
       </tr>
     <% end %> <!-- end of resources loop -->
