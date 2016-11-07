@@ -7,6 +7,11 @@ class Resource < ApplicationRecord
   validates :title, presence: true
   validates :link, :format => URI::regexp(%w(http https))
   has_many :votes
+  validate :must_have_one_topic
+
+  def must_have_one_topic
+     errors.add(:topics, ':You must select at least one topic') unless self.topics.detect { |i| i != "0" } 
+ end
 
   def vote_score
     score = 0
@@ -24,8 +29,6 @@ class Resource < ApplicationRecord
 
 
   def already_voted?(user_id) 
-                    #=> key that represents the column on the votes table
-                              #=>argument we pass through 
      # if something is there, then it will return an array of vote instances, if not it will be empty
     if self.votes.where(user_id: user_id).empty?
       false
@@ -33,6 +36,19 @@ class Resource < ApplicationRecord
       true
     end
   end
+
+  def topics_attributes=(topics_attributes)
+    topics_attributes.values.each do |topic_attribute|
+      if topic_attribute[:name].present?
+        topic = Topic.find_or_create_by(name: topic_attribute[:name])
+        if !self.topics.include?(topic)
+          self.resource_topics.build(:topic => topic)
+      # self.categories << category
+        end
+      end
+    end
+  end
+
 
 end
 
