@@ -72,7 +72,7 @@
           </td>
         <% if current_user.admin || current_user == resource.user %>
           <td><%= link_to "Delete", resource_path(resource), method: :delete, data: { confirm: 'Are you sure?' } %></td>  
-          <td><%= link_to "Edit", edit_resource_path(resource) %></td>
+          <td><%= link_to resource.title, resource.link, :target => "_blank" %></td>
         <% end %>
       </tr>
     <% end %> <!-- end of resources loop -->
