@@ -11,7 +11,7 @@
 
 <div class="container-fluid bg-1 text-center">
   <% @topics.each do |topic| %>
-    <div class="col-xs-3">
+    <div class="col-xs-12 col-sm-6 col-md-3">
       <%= link_to topic_path(topic) do %>
         <div class="thumbnail <%= topic.name %>">
           <div class="thumbnail-header">
