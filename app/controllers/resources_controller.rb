@@ -69,6 +69,11 @@ class ResourcesController < ApplicationController
       redirect_to '/', alert: "You have successfully edited your resource"
     end
   end
+
+  def top_resources
+    @top_resources = Resource.top_resources
+  end
+
       
   # Don't need to add a view for this action since we're redirecting to the index action
   def destroy

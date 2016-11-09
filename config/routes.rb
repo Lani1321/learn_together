@@ -3,9 +3,13 @@ Rails.application.routes.draw do
   # devise_for :users
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }, 
                      :path_names => { :sign_up => "register" }
-
+  
+  get '/resources/top_resources' => 'resources#top_resources'
+  
   # :resources is the different articles/sites that users post 
   resources :resources 
+
+
 
   post "/upvote" => "resources#upvote"
   patch "/upvote" => "resources#upvote"
