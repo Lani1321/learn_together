@@ -4,24 +4,7 @@ class ResourcesController < ApplicationController
  
 
   def index
-    @resources = Resource.all
-  end
-
-  def show
-    # Find the resource we're interested in, passing in params[:id] to get the :id parameter from the request
-    # @resource = Resource.find(params[:id])
-    if params[:topic_id]
-      @topic = Topic.find_by(id: params[:topic_id])
-      if @topic.nil?
-        redirect_to topics_path, alert: "Topic not found"
-      end
-      @resource = @topic.resources.find_by(id: params[:id])
-      if @resource.nil?
-        redirect_to topic_resource_path(@topic), alert: "Resource not found"
-      end
-    else
-      @resource = Resource.find(params[:id]) 
-    end
+     @topic = Topic.find_by(id: params[:topic_id])
   end
 
   def upvote
@@ -48,7 +31,7 @@ class ResourcesController < ApplicationController
     redirect_to :back, notice: "You've successfully voted for this #{resource.title}"
   end
 
-  def create                #=> params[:attribute] contains the attributes I'm interested in
+  def create                
     @resources = Resource.all
     @resource = current_user.resources.new(resource_params)
     # Saves the model in the database, returns a boolean if it's saved or not
@@ -105,7 +88,6 @@ class ResourcesController < ApplicationController
       @resource = Resource.find(params[:id])
     end
 
-    # added user_id to see if it works
     def resource_params
       params.require(:resource).permit(:title, :link, :topic_ids => [], :topics_attributes => [:name])
     end
@@ -113,6 +95,5 @@ class ResourcesController < ApplicationController
     def admin_user
       redirect_to(root_url) unless current_user.admin?
     end
-
-
+    
 end
