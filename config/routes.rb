@@ -20,6 +20,10 @@ Rails.application.routes.draw do
     post "resources/new" => "topics#create_resource"
   end
 
+  resources :topics do 
+    resources :resources, only: [:index]
+  end
+
   # root 'welcome#index'
   root 'topics#index'
 
