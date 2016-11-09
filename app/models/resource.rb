@@ -9,9 +9,15 @@ class Resource < ApplicationRecord
   has_many :votes
   validate :must_have_one_topic
 
+  # This method returns the top three 
+  # resources with the most votes
+  def self.top_resources
+    Resource.all.sort{ |a,b| Vote.total_votes(b.id) <=> Vote.total_votes(a.id)}[0..2]
+  end
+
   def must_have_one_topic
      errors.add(:topics, ':You must select at least one topic') unless self.topics.detect { |i| i != "0" } 
- end
+  end
 
   def vote_score
     score = 0
@@ -43,7 +49,6 @@ class Resource < ApplicationRecord
         topic = Topic.find_or_create_by(name: topic_attribute[:name])
         if !self.topics.include?(topic)
           self.resource_topics.build(:topic => topic)
-      # self.categories << category
         end
       end
     end
