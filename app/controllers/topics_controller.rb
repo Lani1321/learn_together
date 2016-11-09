@@ -16,7 +16,7 @@ class TopicsController < ApplicationController
       redirect_to topic
     else
     render 'new_resource'
-  end
+    end
   end 
 
   def new_resource
@@ -32,5 +32,3 @@ class TopicsController < ApplicationController
 
 
 end
-
-
