@@ -27,7 +27,7 @@ class TopicsController < ApplicationController
   private
 
     def new_resource_params
-        params.require(:resource).permit(:title, :link, :topic_ids => [], :topics_attributes => [:name])
+      params.require(:resource).permit(:title, :link, :topic_ids => [], :topics_attributes => [:name])
     end
 
 
