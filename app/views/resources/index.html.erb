@@ -61,7 +61,7 @@
 
       <tbody>
         
-      <% @topic.resources.each do |resource| %>
+      <% @resources.each do |resource| %>
         <tr>
           <td><%= link_to resource.title, resource.link, :target => "_blank" %></td>
           <td><%= pluralize(Vote.total_votes(resource.id), "vote") %></td>

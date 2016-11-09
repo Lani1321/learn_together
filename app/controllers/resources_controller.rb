@@ -5,6 +5,7 @@ class ResourcesController < ApplicationController
 
   def index
      @topic = Topic.find_by(id: params[:topic_id])
+     @resources = @topic.resources.sort{ |a,b| Vote.total_votes(b.id) <=> Vote.total_votes(a.id)}
   end
 
   def upvote
