@@ -6,8 +6,8 @@ class Resource < ApplicationRecord
   accepts_nested_attributes_for :topics, reject_if: lambda {|attributes| attributes['name'].blank?}
   validates :title, presence: true
   validates :link, :format => URI::regexp(%w(http https))
-  has_many :votes
-  validate :must_have_one_topic
+
+  # validate :must_have_one_topic
 
   # This method returns the top three 
   # resources with the most votes
@@ -15,9 +15,9 @@ class Resource < ApplicationRecord
     Resource.all.sort{ |a,b| Vote.total_votes(b.id) <=> Vote.total_votes(a.id)}[0..2]
   end
 
-  def must_have_one_topic
-     errors.add(:topics, ':You must select at least one topic') unless self.topics.detect { |i| i != "0" } 
-  end
+  # def must_have_one_topic
+  #    errors.add(:topics, ':You must select at least one topic') unless self.topics.detect { |i| i != "0" } 
+  # end
 
   def vote_score
     score = 0
