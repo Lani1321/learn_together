@@ -8,6 +8,14 @@ class ResourcesController < ApplicationController
      @resources = @topic.resources.sort{ |a,b| Vote.total_votes(b.id) <=> Vote.total_votes(a.id)}
   end
 
+  def show 
+    @resource = Resource.find(params[:id])
+    respond_to do |format|
+      format.html { render :show }
+      format.json { render json: @resource, :root => 'resource'}
+    end
+  end
+
   def upvote
     resource = Resource.find(params[:resource][:resource_id])
     if resource.already_voted?(current_user.id)
@@ -46,6 +54,13 @@ class ResourcesController < ApplicationController
       # This rendering is done within the same request as the form submission, whereas the redirect_to will tell the browser to issue another request.
       render 'new'
     end
+  end
+
+  def resource_data
+    resource = Resource.find(params[:id])
+    #render json: ResourceSerializer.serialize(resource)
+    render json: resource.to_json(only: [:title, :link, :id],
+                              include: [user: { only: [:email]}])
   end
 
   def new
