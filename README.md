@@ -7,6 +7,10 @@ The goal of this application is to allow students to share additional resources 
 # INSTALLATION 
 
 The easiest way to see my application running is to follow this link: https://learn-together-app.herokuapp.com/
+If you don't want to create an account, you can use this existing account to navigate throughout the application:
+
+- Email : user@gmail.com
+- Password: password
 
 You can also clone this respository, run bundle install, run rake db:migrate then run rake db:seed.  After you're finished setting that up, open your browser and head to localhost:3000
 
